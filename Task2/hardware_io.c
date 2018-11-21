@@ -39,13 +39,13 @@
 /**
 	*the pin numer of the LED used to indicate a backward rotation
 */
-#define BACKWARD_LED 6
+#define BACKWARD_LED 7
 
 /**
 	*the pin numer of the LED used to indicate a forward rotation
 */
 
-#define FORWARD_LED 7
+#define FORWARD_LED 6
 
 
 //Function section ----------------------------------------------------------------------------------
@@ -79,7 +79,47 @@
 	*Function that displays data on LEDs
 	*/
 	
-	void display_data(
+	void display_data(char number, Direction dir) {
+		//create reset mask
+		int reset_mask = 0xFF00; // upper 8 bits reset
+		reset_mask |= MASK_ONE_BIT_PIN(FORWARD_LED); //forward LED reset
+		reset_mask |= MASK_ONE_BIT_PIN(BACKWARD_LED); //backward LED reset
+		
+		//resets our pins to 0
+		GPIOG->BSRRH = reset_mask;
+		
+		//display direction
+		GPIOG->BSRRL = number << 8;
+		
+		//display direction 
+		if (dir == FORWARD) {
+				GPIOG->BSRRL = MASK_ONE_BIT_PIN(FORWARD_LED);
+		} else if (dir == BACKWARD) {
+				GPIOG->BSRRL =MASK_ONE_BIT_PIN(BACKWARD_LED);
+		}
+	}
 	
+	/*
+	 *Checks reset switches S6 + S7
+	*/
 	
+	bool is_reset_pressed (void) {
+		return !is_Pin_High(GPIOE, 6) || !is_Pin_High(GPIOE, 7);
+	}
+	
+	/*
+	 * Displays error on D18 LED
+	*/
+	void show_error (void) {
+		GPIOG -> BSRRL = MASK_ONE_BIT_PIN(ERROR_LED);
+	}
+	
+	/*
+	 *Clears error LED D18
+	*/
+	void clear_error (void) {
+		GPIOG ->BSRRH = MASK_ONE_BIT_PIN(ERROR_LED);
+	}
+
+//EOF
 	

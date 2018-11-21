@@ -11,6 +11,9 @@
 ".\objects\getline.o"
 ".\objects\sim_board_io.o"
 ".\objects\main.o"
+".\objects\hardware_io.o"
+".\objects\output.o"
+".\objects\rotary_encoder.o"
 --strict --scatter ".\Objects\Task2.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

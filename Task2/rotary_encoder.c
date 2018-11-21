@@ -60,7 +60,7 @@
 /**
 	*func that returns direction of encoder
 	*/
-	Direction encoder_dir() {
+	Direction encoder_get_dir() {
 		return direction;
 	}
 	
@@ -74,7 +74,7 @@
 /**
 	*func that returns pos in 0.1 degrees
 	*/
-	int encoder_pos() {
+	int encoder_get_pos() {
 		//x10 for returning 10th of deg.
 		return position * DPR *10 / PPR;
 	}
@@ -163,10 +163,4 @@
 			encoder_reset();
 	}
 
-
-
-
-
-
-
-
+//EOF

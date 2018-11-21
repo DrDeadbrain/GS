@@ -23,7 +23,7 @@
 	*
 	* @return direction
  */
-	Direction encoder_get_direction(void);
+	Direction encoder_get_dir(void);
 
 /**
 	* pos is relative to last reset, negative values indicate that
@@ -31,7 +31,7 @@
 	*
 	* @return position in 0.1 degrees
  */
-	int encoder_get_position(void);
+	int encoder_get_pos(void);
 
 /**
 	* pos is relative to last reset, negative values indicate that 
@@ -39,7 +39,7 @@
 	*
 	* @return position in pulses
  */
-	int encoder_get_position_raw(void);
+	int encoder_raw_pos(void);
 
 /**
  * @brief resets encoder position
@@ -64,7 +64,6 @@ void encoder_init(void);
  */
 int encoder_update(void);
 	
-	
-	
-	
-	#endif /*ROTARY_ENCODER_H*/
+#endif /*ROTARY_ENCODER_H*/
+
+

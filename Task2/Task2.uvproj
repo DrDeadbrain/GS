@@ -865,6 +865,21 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
+            <File>
+              <FileName>hardware_io.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hardware_io.c</FilePath>
+            </File>
+            <File>
+              <FileName>output.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\output.c</FilePath>
+            </File>
+            <File>
+              <FileName>rotary_encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rotary_encoder.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -963,6 +978,26 @@
               <FileName>timer.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\TI_BRD_LIB\Library\timer.h</FilePath>
+            </File>
+            <File>
+              <FileName>hardware_io.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hardware_io.h</FilePath>
+            </File>
+            <File>
+              <FileName>output.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\output.h</FilePath>
+            </File>
+            <File>
+              <FileName>rotary_encoder.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\rotary_encoder.h</FilePath>
+            </File>
+            <File>
+              <FileName>error.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\error.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1858,6 +1893,21 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
+            <File>
+              <FileName>hardware_io.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hardware_io.c</FilePath>
+            </File>
+            <File>
+              <FileName>output.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\output.c</FilePath>
+            </File>
+            <File>
+              <FileName>rotary_encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rotary_encoder.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1887,6 +1937,26 @@
               <FileName>timer.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\TI_BRD_LIB\Library\timer.h</FilePath>
+            </File>
+            <File>
+              <FileName>hardware_io.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hardware_io.h</FilePath>
+            </File>
+            <File>
+              <FileName>output.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\output.h</FilePath>
+            </File>
+            <File>
+              <FileName>rotary_encoder.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\rotary_encoder.h</FilePath>
+            </File>
+            <File>
+              <FileName>error.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\error.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -2683,6 +2753,21 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
+            <File>
+              <FileName>hardware_io.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hardware_io.c</FilePath>
+            </File>
+            <File>
+              <FileName>output.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\output.c</FilePath>
+            </File>
+            <File>
+              <FileName>rotary_encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rotary_encoder.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -2781,6 +2866,26 @@
               <FileName>timer.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\TI_BRD_LIB\Library\timer.h</FilePath>
+            </File>
+            <File>
+              <FileName>hardware_io.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hardware_io.h</FilePath>
+            </File>
+            <File>
+              <FileName>output.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\output.h</FilePath>
+            </File>
+            <File>
+              <FileName>rotary_encoder.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\rotary_encoder.h</FilePath>
+            </File>
+            <File>
+              <FileName>error.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\error.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -3607,6 +3712,21 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
+            <File>
+              <FileName>hardware_io.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hardware_io.c</FilePath>
+            </File>
+            <File>
+              <FileName>output.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\output.c</FilePath>
+            </File>
+            <File>
+              <FileName>rotary_encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\rotary_encoder.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -3636,6 +3756,26 @@
               <FileName>timer.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\TI_BRD_LIB\Library\timer.h</FilePath>
+            </File>
+            <File>
+              <FileName>hardware_io.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\hardware_io.h</FilePath>
+            </File>
+            <File>
+              <FileName>output.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\output.h</FilePath>
+            </File>
+            <File>
+              <FileName>rotary_encoder.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\rotary_encoder.h</FilePath>
+            </File>
+            <File>
+              <FileName>error.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\error.h</FilePath>
             </File>
           </Files>
         </Group>
