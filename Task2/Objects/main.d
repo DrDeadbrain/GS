@@ -1,6 +1,6 @@
 .\objects\main.o: main.c
 .\objects\main.o: error.h
-.\objects\main.o: .\TI_BRD_LIB\Library\timer.h
+.\objects\main.o: timer.h
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\main.o: .\TI_BRD_LIB\Library\TI_Lib.h
 .\objects\main.o: .\TI_BRD_LIB\Library\TI_memory_map.h

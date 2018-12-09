@@ -10,52 +10,56 @@
 #ifndef ROTARY_ENCODER_H
 #define ROTARY_ENCODER_H
 /**
-	*@biref enum of possible rotation directions
-*/
-	typedef enum {
-			FORWARD, //!<encoder is turning forwards
-			BACKWARD, //!< encoder is turning backwards
-			UNKNOWN //!< encoder is stationary or direction is unknown
-	} Direction;
-	
-/**
-	* @brief returns direction of encoder
-	*
-	* @return direction
+ * @brief Represents the possible directions of rotation for the encoder
  */
-	Direction encoder_get_dir(void);
+typedef enum {
+    FORWARD, //!< the encoder is turning forwards
+    BACKWARD, //!< the encoder is turning backwards
+    UNKNOWN  //!< the encoder is stationary or the direction is unknown
+} Direction;
 
 /**
-	* pos is relative to last reset, negative values indicate that
-	* encoder turned backwards
-	*
-	* @return position in 0.1 degrees
+ * @brief Returns the direction the encoder is currently turning in
+ *
+ * @return the direction
  */
-	int encoder_get_pos(void);
+Direction encoder_get_direction(void);
 
 /**
-	* pos is relative to last reset, negative values indicate that 
-	* encoder turned backwards
-	*
-	* @return position in pulses
+ * @brief Returns the position in 0.1 degrees
+ *
+ * Position is relative to last reset, negative values indicate that the
+ * encoder turned backwards
+ *
+ * @return position in 0.1 degrees
  */
-	int encoder_raw_pos(void);
+int encoder_get_position(void);
 
 /**
- * @brief resets encoder position
+ * @brief Returns the position in pulses
+ *
+ * Position is relative to last reset, negative values indicate that the
+ * encoder turned backwards
+ *
+ * @return position in pulses
  */
-	void encoder_reset(void);
+int encoder_get_position_raw(void);
 
 /**
- * @brief initializes encoder
+ * @brief Resets the encoder position
+ */
+void encoder_reset(void);
+
+/**
+ * @brief Initializes the encoder
  */
 void encoder_init(void);
 
 /**
- * @brief updates encoder
+ * @brief Updates the encoder
  *
- * This method will read the two inputs calculating the current phase. Then
- * updates the position and direction variables accordingly. If invalid
+ * This method will read the two inputs calculating the current phase. It then
+ * updates the position and Direction variables accordingly. If an invalid
  * phase transition is detected, an error is returned.
  *
  * @returns error code
@@ -63,7 +67,6 @@ void encoder_init(void);
  * @retval E_INVALID_STATE the encoder has moved too much - state is now unknown
  */
 int encoder_update(void);
-	
-#endif /*ROTARY_ENCODER_H*/
+#endif /* ROTARY_ENCODER_H */
 
 

@@ -57,29 +57,29 @@
 	*
 	*@return wheter the pin is high
 */
-	static bool is_Pin_High(GPIO_TypeDef* GPIOx , int pin) {
-		return (GPIOx->IDR & MASK_ONE_BIT_PIN(pin)) == MASK_ONE_BIT_PIN(pin); 
+	static bool io_is_Pin_High(GPIO_TypeDef *GPIOx , int pin) {
+		return (GPIOx -> IDR & MASK_ONE_BIT_PIN(pin)) == MASK_ONE_BIT_PIN(pin); 
 	}
 	
 /** 
 	*Reads Channel A from encoder
 */
-	bool get_encoder_channel_A(void) {
-		return is_Pin_High(GPIOE, ENCODER_CHANNEL_A);
+	bool io_get_encoder_channel_A(void) {
+		return io_is_Pin_High(GPIOE, ENCODER_CHANNEL_A);
 	}
 	
 /** 
 	*Reads Channel B from encoder
 */
-	bool get_encoder_channel_B(void) {
-		return is_Pin_High(GPIOE, ENCODER_CHANNEL_B);
+	bool io_get_encoder_channel_B(void) {
+		return io_is_Pin_High(GPIOE, ENCODER_CHANNEL_B);
 	}
 	
 /** 
 	*Function that displays data on LEDs
 	*/
 	
-	void display_data(char number, Direction dir) {
+	void io_display_data(char number, Direction dir) {
 		//create reset mask
 		int reset_mask = 0xFF00; // upper 8 bits reset
 		reset_mask |= MASK_ONE_BIT_PIN(FORWARD_LED); //forward LED reset
@@ -103,21 +103,21 @@
 	 *Checks reset switches S6 + S7
 	*/
 	
-	bool is_reset_pressed (void) {
-		return !is_Pin_High(GPIOE, 6) || !is_Pin_High(GPIOE, 7);
+	bool io_is_reset_pressed (void) {
+		return !io_is_Pin_High(GPIOE, 6) || !io_is_Pin_High(GPIOE, 7);
 	}
 	
 	/*
 	 * Displays error on D18 LED
 	*/
-	void show_error (void) {
+	void io_show_error (void) {
 		GPIOG -> BSRRL = MASK_ONE_BIT_PIN(ERROR_LED);
 	}
 	
 	/*
 	 *Clears error LED D18
 	*/
-	void clear_error (void) {
+	void io_clear_error (void) {
 		GPIOG ->BSRRH = MASK_ONE_BIT_PIN(ERROR_LED);
 	}
 

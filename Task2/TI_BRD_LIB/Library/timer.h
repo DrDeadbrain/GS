@@ -1,14 +1,9 @@
-
-/**
-  ******************************************************************************
-  * @file    	timer.h 
-  * @author  	Schoenher, Nils
-  * @version  V1.0
-  * @date     10.10.2016
-  * @brief    Timer for calculation
-  ******************************************************************************
-  */
-
+/*
+ * Modul zur einfachen Zeitmessung GS WS 2016
+ * Franz Korf
+ * file timer.h
+ */
+ 
 #ifndef TIMER_H
 #define TIMER_H
 

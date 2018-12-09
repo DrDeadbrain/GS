@@ -1,15 +1,12 @@
-/**
-  ******************************************************************************
-  * @file    	timer.c 
-  * @author  	Schoenher, Nils
-  * @version  V1.0
-  * @date     10.10.2016
-  * @brief    Timer related functions
-  ******************************************************************************
-  */
-
-#include "TI_memory_map.h"
+/*
+ * Implementation des timer Modules.
+ *  GS WS 2016
+ * Franz Korf
+ * file timer.c
+ */
+ 
 #include "timer.h"
+#include "stm32f10x.h"
 
 #define TIM2_CLOCK      84  /* Mhz */
 // 84 Timer Ticks == 1 us
@@ -35,5 +32,3 @@ uint64_t timerDiffToNsec(uint32_t firstValue, uint32_t secondValue) {
 	 erg = erg/TIM2_CLOCK;
 	 return erg;
 }
-
-

@@ -18,7 +18,7 @@
  * @retval true channel is high
  * @retval false channel is low
  */
-bool get_encoder_channel_A(void);
+bool io_get_encoder_channel_A(void);
 
 /**
  * @brief Reads channel B from encoder
@@ -26,7 +26,7 @@ bool get_encoder_channel_A(void);
  * @retval true channel is high
  * @retval false channel is low
  */
-bool get_encoder_channel_B(void);
+ bool io_get_encoder_channel_B(void);
 
 /**
  * @brief Displays data on LEDs
@@ -34,25 +34,25 @@ bool get_encoder_channel_B(void);
  * @param[in] number an 8 bit number to be displayed on LEDS D21-D28
  * @param[in] dir displays the direction on LEDS D20 / D19
  */
-void display_data(char number, Direction dir);
+void io_display_data(char number, Direction dir);
 
 
 /**
  * @brief Displays an error by illuminating D18
  */
-void show_error(void);
+void io_show_error(void);
 
 /**
  * @brief Clears the error LED D18
  */
-void clear_error(void);
+void io_clear_error(void);
 
 /**
  * @brief Checks reset switches S7 and S6
  * 
  * @return true when either is pressed
  */
-bool is_reset_pressed(void);
+bool io_is_reset_pressed(void);
 
 #endif /* HARDWARE_IO_H */
 
