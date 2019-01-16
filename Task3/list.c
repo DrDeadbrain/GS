@@ -148,7 +148,7 @@ int iterator_next(Iterator *it, Rectangle *rect) {
 		return E_INVALID_STATE;
 	}
 	*rect = it->next->value;
-	it->next = it->next->value;
+	it->next = it->next->next;
 	it->current_index++;
 	return 0;
 }

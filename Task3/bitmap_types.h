@@ -62,7 +62,7 @@ PACKED(
 
 
 //@brief data (RGB values) of a single pixel
-PACKED (
+PACKED(
 	typedef struct {
 	unsigned char blue;
 	unsigned char green;

@@ -77,7 +77,7 @@ int analyze_bitmap(Bitmap *bm) {
 	List *pRects = &rectangles;
 	List potential_rectangles;
 	List *pPot_Rects = &potential_rectangles;
-	list_int(pRects);
+	list_init(pRects);
 	list_init(pPot_Rects);
 
 	bool is_red = false;
@@ -97,8 +97,7 @@ int analyze_bitmap(Bitmap *bm) {
 				rect.color = RED;
 				rect.x_start = x;
 				rect.y_start = y;
-			}
-			else if (is_red && !equal(p, RED)) {
+			} else if (is_red && !equal(p, RED)) {
 				is_red = false;
 				rect.x_end = x - 1;
 				rect.y_end = y;
@@ -112,8 +111,7 @@ int analyze_bitmap(Bitmap *bm) {
 				rect.color = GREEN;
 				rect.x_start = x;
 				rect.y_start = y;
-			}
-			else if (is_green && !equal(p, GREEN)) {
+			} else if (is_green && !equal(p, GREEN)) {
 				is_green = false;
 				rect.x_end = x - 1;
 				rect.y_end = y;
@@ -150,12 +148,12 @@ int analyze_bitmap(Bitmap *bm) {
 		it = list_get_iterator(pRects);
 		while (iterator_has_next(&it)) {
 			iterator_next(&it, &r);
-			char* color = equal(r.color, RED) ? "RED" : "GREEN";
+			char *color = equal(r.color, RED) ? "RED" : "GREEN";
 			printf("Rectangle [%s from (%d|%d) to (%d|%d)]\n", color, r.x_start, r.y_start, r.x_end, r.y_end);
 		}
 
-		PixelData blue = { 255, 0, 0 };
-		Rectangle border = { blue, bm->imageData.width - 1, 0, bm->imageData.height - 1, 0 };
+		PixelData blue = {255, 0, 0};
+		Rectangle border = {blue, bm->imageData.width - 1, 0, bm->imageData.height - 1, 0};
 
 		it = list_get_iterator(pRects);
 		while (iterator_has_next(&it)) {
@@ -165,7 +163,7 @@ int analyze_bitmap(Bitmap *bm) {
 			border.x_end = fmax(border.x_end, r.x_end);
 			border.y_start = fmin(border.y_start, r.y_start);
 			border.y_end = fmax(border.y_end, r.y_end);
-	    }
+		}
 
 		printf("Border: (%d|%d) to (%d|%d)\n", border.x_start, border.y_start, border.x_end, border.y_end);
 
@@ -197,3 +195,4 @@ int analyze_bitmap(Bitmap *bm) {
 		list_clear(pPot_Rects);
 		return 0;
 	}
+}

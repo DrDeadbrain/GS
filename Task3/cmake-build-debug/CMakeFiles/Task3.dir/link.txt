@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -Wl,--enable-auto-import CMakeFiles/Task3.dir/analyze.c.o CMakeFiles/Task3.dir/input.c.o CMakeFiles/Task3.dir/list.c.o CMakeFiles/Task3.dir/main.c.o CMakeFiles/Task3.dir/output.c.o CMakeFiles/Task3.dir/vlarray.c.o  -o Task3.exe -Wl,--out-implib,libTask3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
